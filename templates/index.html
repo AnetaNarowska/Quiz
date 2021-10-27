@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Python</title>
+</head>
+
+<body>
+<h1>Quiz Python</h1>
+<!--
+    przejdz do sciezki /result
+-->
+<form action="/result">
+{% for q in questions %}
+    {{q.name}}
+    <select name="{{q.number}}">
+        <!-- value dla Pythona, w środku dla uzytkownika, moze to byc 1 do 1, albo moga byc inne wartosci-->
+        <option value="tak">tak</option>
+        <option value="nie">nie</option>
+    </select>
+{% endfor %}
+<!-- przycisk ktory ma wartosc wynik-->
+<input type="submit" value="Wynik"> 
+</form>
+</body>
+</html>
